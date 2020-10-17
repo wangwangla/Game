@@ -1,44 +1,51 @@
 package com.kw.game.view;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.badlogic.gdx.utils.Align;
 import com.kw.game.view.base.BaseView;
 
 public class SplashView extends BaseView {
-    private World world;
-    private Box2DDebugRenderer renderer;
     public SplashView(){
-        setSize(720,1280);
-//        WordActor actor = new WordActor();
-//        actor.setPosition(900,100);
-//        addActor(actor);
-        //        world = new World(new Vector2(0,-9.8F),true);
-//        renderer = new Box2DDebugRenderer();
-//
-//        BodyDef def = new BodyDef();
-//        def.position.set(160,400);
-//        def.type = BodyDef.BodyType.StaticBody;
-//        Body body = world.createBody(def);
-//        PolygonShape shape = new PolygonShape();
-//        shape.setAsBox(1500,5);
-//        FixtureDef def1 = new FixtureDef();
-//        def1.shape = shape;
-//        body.createFixture(def1);
-//        def.position.set(660,800);
-//        def.type = BodyDef.BodyType.DynamicBody;
-//        body = world.createBody(def);
-//        shape.setAsBox(50,50);
-//        def1.shape = shape;
-//        def1.restitution = 0.5f;  //弹起多少
-//        def1.friction = 1.5F;
-//        body.createFixture(def1);
-    }
 
-    @Override
-    public void draw(Batch batch, float parentAlpha) {
-        super.draw(batch, parentAlpha);
-//        world.step(Gdx.app.getGraphics().getDeltaTime(), 3, 3);
-//        renderer.render(world,AppGame.getCra().combined);
+/********************texture******************************/
+//        Texture imageTexture = new Texture(Gdx.files.internal("badlogic.jpg"));
+//        Image image = new Image(imageTexture);
+//        addActor(image);
+//        image.setPosition(400,400);
+//        image.setOrigin(Align.center);
+//        image.setOrigin(image.getWidth()/2,image.getHeight()/2);
+//        image.setRotation(100);
+//        image.setColor(Color.CLEAR);
+//        image.setColor(Color.valueOf("333333"));
+//        //层级
+//        image.toFront(); //最前方
+//        image.toBack();  // 最后方
+
+/*******************************************************/
+//              TextureRegion
+/*******************************************************/
+//
+//        TextureRegion region = new TextureRegion();
+//        region.setTexture(new Texture(Gdx.files.internal("badlogic.jpg")));
+//        region.setRegion(0,0,421,601);
+//        Image image = new Image(region);
+//        image.setPosition(getWidth()/2,getHeight()/2,Align.center);
+//        addActor(image);
+//
+
+/*******************************************************/
+//              Sprite
+/*******************************************************/
+//        Sprite sprite = new Sprite();
+//        addActor(sprite);
     }
 }
