@@ -5,6 +5,7 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
@@ -47,5 +48,15 @@ public class SplashView extends BaseView {
 /*******************************************************/
 //        Sprite sprite = new Sprite();
 //        addActor(sprite);
+
+
+
+/*******************************************************/
+//               bitfont  游戏中不会直接的使用，他会和
+//           label一起使用。
+/*******************************************************/
+//        BitmapFont bitmapFont ;
+//        addActor(bitmapFont);
+
     }
 }
