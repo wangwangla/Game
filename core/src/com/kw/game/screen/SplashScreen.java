@@ -12,6 +12,7 @@ public class SplashScreen extends BaseScreen {
     public SplashScreen(){
         rootView = new SplashView();
     }
+
     @Override
     public void show() {
         super.show();

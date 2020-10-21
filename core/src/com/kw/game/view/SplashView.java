@@ -12,11 +12,27 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Align;
+import com.kw.game.model.SplashData;
 import com.kw.game.view.base.BaseView;
 
 public class SplashView extends BaseView {
-    public SplashView(){
+    public SplashView(SplashData data){
+        Image image1 = new Image(new Texture(Gdx.files.internal("white.png")));
+        addActor(image1);
+        image1.setSize(100,100);
+        image1.setPosition(200,700);
 
+        Image image = new Image(new Texture(Gdx.files.internal("white.png")));
+        addActor(image);
+        image.setSize(100,100);
+        image.setPosition(400,400);
+
+        Image image2 = new Image(new Texture(Gdx.files.internal("white.png")));
+        addActor(image2);
+        image2.setSize(100,100);
+        image2.setPosition(800,400);
+
+        System.out.println("===============>");
 /********************texture******************************/
 //        Texture imageTexture = new Texture(Gdx.files.internal("badlogic.jpg"));
 //        Image image = new Image(imageTexture);
