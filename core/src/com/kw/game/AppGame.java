@@ -3,6 +3,7 @@ package com.kw.game;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.CpuSpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -20,8 +21,6 @@ public class AppGame extends Game {
 	@Override
 	public void create () {
 	    //加载资源： cvs   json
-
-
         viewPort = new ExtendViewport(720,1280);
         setScreen(new SplashScreen());
 	}
@@ -46,6 +45,8 @@ public class AppGame extends Game {
 
     @Override
 	public void render () {
+        Gdx.gl.glClearColor(11F,1F,1F,1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT|GL20.GL_DEPTH_BUFFER_BIT);
 		super.render();
 	}
 
@@ -58,5 +59,9 @@ public class AppGame extends Game {
 
     public static Viewport getViewPort() {
         return viewPort;
+    }
+
+    public void canshu(){
+
     }
 }

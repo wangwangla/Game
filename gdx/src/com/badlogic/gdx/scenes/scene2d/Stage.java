@@ -16,7 +16,7 @@
 
 package com.badlogic.gdx.scenes.scene2d;
 
-import com.badlogic.gdx.Application.ApplicationType;
+import com.badlogic.gdx.Application.ApplicationType1;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.Input;
@@ -216,8 +216,8 @@ public class Stage extends InputAdapter implements Disposable {
 			pointerOverActors[pointer] = fireEnterAndExit(overLast, pointerScreenX[pointer], pointerScreenY[pointer], pointer);
 		}
 		// Update over actor for the mouse on the desktop.
-		ApplicationType type = Gdx.app.getType();
-		if (type == ApplicationType.Desktop || type == ApplicationType.Applet || type == ApplicationType.WebGL) {
+		ApplicationType1 type = Gdx.app.getType();
+		if (type == ApplicationType1.Desktop || type == ApplicationType1.Applet || type == ApplicationType1.WebGL) {
 			// if (mouseOverActor != null) mouseOverActor.setDebug(false);
 			mouseOverActor = fireEnterAndExit(mouseOverActor, mouseScreenX, mouseScreenY, -1);
 			// if (mouseOverActor != null) mouseOverActor.setDebug(true);

@@ -9,12 +9,13 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.kw.game.AppGame;
 
 public class BaseScreen implements Screen {
-    private Stage stage;
+    protected Stage stage;
     protected Group rootView;
 
     @Override
     public void show() {
         stage = new Stage(AppGame.getViewPort(),AppGame.getBatch());
+        Gdx.input.setInputProcessor(stage);
         if (rootView!=null){
             stage.addActor(rootView);
         }
@@ -22,8 +23,6 @@ public class BaseScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(0.2F,0.2F,0.2F,1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT|GL20.GL_DEPTH_BUFFER_BIT);
         if (stage!=null){
             stage.act();
             stage.draw();

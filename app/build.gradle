@@ -21,9 +21,16 @@ android {
         }
     }
 
+    packagingOptions {
+        pickFirst 'META-INF/*'
+    }
+
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(":gdx-backend-android")
+
+    implementation project(':core')
+
 }

@@ -39,8 +39,8 @@ public class LwjglApplet extends Applet {
 		}
 
 		@Override
-		public ApplicationType getType () {
-			return ApplicationType.Applet;
+		public ApplicationType1 getType () {
+			return ApplicationType1.Applet;
 		}
 	}
 

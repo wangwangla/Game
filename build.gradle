@@ -39,10 +39,10 @@ allprojects {
         aiVersion = '1.5.0'
     }
     repositories {
-        maven { url 'http://deltadna.bintray.com/android' }
+
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
-
+        maven { url 'http://deltadna.bintray.com/android' }
         google()
         jcenter()
     }
