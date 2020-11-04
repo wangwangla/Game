@@ -31,7 +31,6 @@ import org.lwjgl.opengl.PixelFormat;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Graphics;
-import com.badlogic.gdx.graphics.Cursor;
 import com.badlogic.gdx.graphics.Cursor.SystemCursor;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.GL30;
@@ -276,7 +275,7 @@ public class LwjglGraphics implements Graphics {
 		String versionString = org.lwjgl.opengl.GL11.glGetString(GL11.GL_VERSION);
 		String vendorString = org.lwjgl.opengl.GL11.glGetString(GL11.GL_VENDOR);
 		String rendererString = org.lwjgl.opengl.GL11.glGetString(GL11.GL_RENDERER);
-		glVersion = new GLVersion(Application.ApplicationType.Desktop, versionString, vendorString, rendererString);
+		glVersion = new GLVersion(Application.ApplicationType1.Desktop, versionString, vendorString, rendererString);
 	}
 
 	private static void extractExtensions () {

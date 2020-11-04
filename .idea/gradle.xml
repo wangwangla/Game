@@ -14,7 +14,6 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/desktop" />
             <option value="$PROJECT_DIR$/gdx" />
-            <option value="$PROJECT_DIR$/gdx-backend-android" />
             <option value="$PROJECT_DIR$/gdx-backend-lwjgl" />
             <option value="$PROJECT_DIR$/gdx-box2d" />
           </set>

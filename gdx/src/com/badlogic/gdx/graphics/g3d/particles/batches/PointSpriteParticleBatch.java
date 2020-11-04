@@ -16,7 +16,7 @@
 
 package com.badlogic.gdx.graphics.g3d.particles.batches;
 
-import com.badlogic.gdx.Application.ApplicationType;
+import com.badlogic.gdx.Application.ApplicationType1;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
@@ -60,7 +60,7 @@ public class PointSpriteParticleBatch extends BufferedParticleBatch<PointSpriteC
 
 	private static void enablePointSprites () {
 		Gdx.gl.glEnable(GL20.GL_VERTEX_PROGRAM_POINT_SIZE);
-		if (Gdx.app.getType() == ApplicationType.Desktop) {
+		if (Gdx.app.getType() == ApplicationType1.Desktop) {
 			Gdx.gl.glEnable(0x8861); // GL_POINT_OES
 		}
 		pointSpritesEnabled = true;

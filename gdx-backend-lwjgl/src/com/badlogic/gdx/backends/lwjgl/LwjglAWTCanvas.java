@@ -213,8 +213,8 @@ public class LwjglAWTCanvas implements Application {
 	}
 
 	@Override
-	public ApplicationType getType () {
-		return ApplicationType.Desktop;
+	public ApplicationType1 getType () {
+		return ApplicationType1.Desktop;
 	}
 
 	@Override
