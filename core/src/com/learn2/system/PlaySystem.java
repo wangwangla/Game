@@ -1,38 +1,47 @@
 package com.learn2.system;
 
-import com.artemis.Aspect;
-import com.artemis.BaseEntitySystem;
-import com.artemis.systems.DelayedEntityProcessingSystem;
-import com.artemis.systems.DelayedIteratingSystem;
-import com.artemis.systems.EntityProcessingSystem;
-import com.artemis.systems.IntervalEntityProcessingSystem;
 import com.badlogic.ashley.core.ComponentMapper;
 import com.badlogic.ashley.core.Entity;
-import com.badlogic.ashley.core.EntitySystem;
 import com.badlogic.ashley.core.Family;
-import com.badlogic.ashley.systems.IntervalIteratingSystem;
 import com.badlogic.ashley.systems.IteratingSystem;
-import com.learn2.component.HelloConponent;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.learn2.component.MoveComponent;
+import com.learn2.component.PlayComponect;
 
 /**
  * - 每时每刻处理一个实体子集
  *
  */
-public class HelloSystem extends IteratingSystem {
-    private final ComponentMapper<HelloConponent> ghostM = ComponentMapper.getFor(HelloConponent.class);
-    public HelloSystem() {
-        super(Family.all(HelloConponent.class).get());
+public class PlaySystem extends IteratingSystem {
+    private final ComponentMapper<PlayComponect> playCom = ComponentMapper.getFor(PlayComponect.class);
+    private final ComponentMapper<MoveComponent> moveCom = ComponentMapper.getFor(MoveComponent.class);
+
+    public PlaySystem() {
+        super(Family.all(PlayComponect.class).get());
     }
 
-    public HelloSystem(Family family, int priority) {
+    public PlaySystem(Family family, int priority) {
         super(family, priority);
     }
 
     @Override
     protected void processEntity(Entity entity, float deltaTime) {
-        System.out.println(entity.getComponent(HelloConponent.class).message);
-        HelloConponent h = ghostM.get(entity);
-        System.out.println(h.message);
+        MoveComponent moveComponent = moveCom.get(entity);
+//        MoveComponent moveComponent = moveCom.get(entity);
+//        Body body = moveComponent.body;
+
+        /**
+         * 判断实体的属性执行相应的操作
+         */
+        if ((Gdx.input.isKeyPressed(Input.Keys.D) || Gdx.input.isKeyPressed(Input.Keys.RIGHT))) {
+//            body.applyLinearImpulse(tmpV1.set(movement.speed, 0).scl(body.getMass()), body.getWorldCenter(), true);
+//            body.applyLinearImpulse(new Vector2(3,0), body.getWorldCenter(), true);
+            moveComponent.body.applyLinearImpulse(new Vector2(0, 3.6F).scl(moveComponent.body.getMass()),
+                    moveComponent.body.getWorldCenter(), true);
+        }
     }
 }
 //

@@ -1,7 +1,6 @@
 package com.kw.game;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.ychstudio.PacMan;
 
 public class DemoApp{
     public static void main(String[] args) {
