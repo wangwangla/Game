@@ -7,6 +7,7 @@ import com.badlogic.gdx.math.Matrix4;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.kw.game.AppGame;
+import com.kw.game.constant.GameConsatant;
 
 public class BaseScreen implements Screen {
     private Stage stage;
@@ -14,7 +15,7 @@ public class BaseScreen implements Screen {
 
     @Override
     public void show() {
-        stage = new Stage(AppGame.getViewPort(),AppGame.getBatch());
+        stage = new Stage(AppGame.getViewPort(), GameConsatant.batch);
         if (rootView!=null){
             stage.addActor(rootView);
         }
