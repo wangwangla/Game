@@ -14,6 +14,7 @@ import com.learn2.manager.GameBuilder;
 import com.learn2.system.PlaySystem;
 
 public class GameView extends Group {
+    private Body body;
     public GameView(){
 //        Image image = new Image(new Texture(Gdx.files.internal("badlogic.jpg")));
 //        addActor(image);
@@ -26,7 +27,7 @@ public class GameView extends Group {
         shapeBox.setAsBox(10,10);
         BoxActor box = new BoxActor(shapeBox,new Vector2(10,20));
         addActor(box);
-        Body body = box.getBody();
+        body = box.getBody();
 
         Engine engine = Constant.engine;
         PlaySystem playSystem = new PlaySystem();
@@ -37,5 +38,9 @@ public class GameView extends Group {
         playEntity.add(playComponect);
         playEntity.add(component);
         engine.addEntity(playEntity);
+    }
+
+    public Body getBody() {
+        return body;
     }
 }

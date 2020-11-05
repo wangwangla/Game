@@ -2,6 +2,7 @@ package com.learn2;
 
 import com.badlogic.ashley.core.Engine;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.ai.GdxAI;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
@@ -31,6 +32,7 @@ public class MainRun extends Game {
 //        entity.add(helloConponent);
 //        engine.addEntity(entity);
 //        engine.update(0.16F);
+//        GdxAI.getTimepiece().update(1);
 
     }
 

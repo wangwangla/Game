@@ -9,15 +9,16 @@ import com.learn2.component.PlayComponect;
 public class PlayAgent implements Telegraph {
 
     private final PlayComponect playComponect;
-    private final StateMachine<PlayAgent,PlayState> stateStateMachine;
+    public final StateMachine<PlayAgent,PlayState> stateStateMachine;
 
     public PlayAgent(PlayComponect componect){
         this.playComponect = componect;
-        stateStateMachine = new DefaultStateMachine<>();
+        stateStateMachine = new DefaultStateMachine<>(this);
     }
 
     @Override
     public boolean handleMessage(Telegram msg) {
+        System.out.println(msg.message+"==================");
         return false;
     }
 

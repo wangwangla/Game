@@ -6,6 +6,8 @@ import com.badlogic.ashley.core.Family;
 import com.badlogic.ashley.systems.IteratingSystem;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.ai.GdxAI;
+import com.badlogic.gdx.ai.msg.MessageManager;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.learn2.component.MoveComponent;
@@ -32,7 +34,8 @@ public class PlaySystem extends IteratingSystem {
         MoveComponent moveComponent = moveCom.get(entity);
 //        MoveComponent moveComponent = moveCom.get(entity);
 //        Body body = moveComponent.body;
-
+        PlayComponect playComponect = playCom.get(entity);
+        playComponect.agent.update(deltaTime);
         /**
          * 判断实体的属性执行相应的操作
          */
@@ -41,7 +44,10 @@ public class PlaySystem extends IteratingSystem {
 //            body.applyLinearImpulse(new Vector2(3,0), body.getWorldCenter(), true);
             moveComponent.body.applyLinearImpulse(new Vector2(0, 3.6F).scl(moveComponent.body.getMass()),
                     moveComponent.body.getWorldCenter(), true);
+            System.out.println("=============>");
         }
+        MessageManager.getInstance().update();
+        GdxAI.getTimepiece().update(Gdx.graphics.getDeltaTime());
     }
 }
 //
