@@ -26,6 +26,7 @@ public class PlayerAgent implements Telegraph {
 
     @Override
     public boolean handleMessage(Telegram msg) {
+        System.out.println("=============>发送消息！！！！！！！！！！！！！");
         return stateMachine.handleMessage(msg);
     }
 

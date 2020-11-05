@@ -21,6 +21,9 @@ public class MovementSystem extends IteratingSystem {
         MovementComponent movement = movementM.get(entity);
         TransformComponent transform = transformM.get(entity);
 
+        /**
+         * 處理地圖跑出去
+         */
         if (movement.body.getPosition().x <= 0) {
             movement.body.setTransform(19.0f, movement.body.getPosition().y, 0);
         }

@@ -2,6 +2,7 @@ package com.ychstudio.components;
 
 import com.badlogic.ashley.core.Component;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.ychstudio.TeleManager;
 import com.ychstudio.ai.PlayerAI;
 import com.ychstudio.ai.fsm.PlayerAgent;
 import com.ychstudio.ai.fsm.PlayerState;

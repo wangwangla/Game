@@ -39,6 +39,7 @@ public class GhostAgent implements Telegraph {
 
     @Override
     public boolean handleMessage(Telegram msg) {
+        System.out.println("===========xxxxxxxxxxxxxxxx");
         return stateMachine.handleMessage(msg);
     }
 

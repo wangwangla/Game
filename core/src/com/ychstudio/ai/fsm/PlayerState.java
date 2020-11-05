@@ -3,6 +3,7 @@ package com.ychstudio.ai.fsm;
 import com.badlogic.gdx.ai.fsm.State;
 import com.badlogic.gdx.ai.msg.Telegram;
 import com.badlogic.gdx.math.Vector2;
+import com.ychstudio.TeleManager;
 import com.ychstudio.components.PlayerComponent;
 import com.ychstudio.gamesys.GameManager;
 
@@ -154,7 +155,13 @@ public enum PlayerState implements State<PlayerAgent> {
 
     @Override
     public void enter(PlayerAgent entity) {
-        entity.timer = 0;
+//        entity.timer = 0;
+//        Telegram telegram = new Telegram();
+//        telegram.sender = entity;
+//        telegram.receiver = TeleManager.ghone;
+//        telegram.message = 1;
+//        telegram.extraInfo = "你猜！！";
+//        entity.stateMachine.(telegram);
     }
 
     @Override
@@ -163,6 +170,7 @@ public enum PlayerState implements State<PlayerAgent> {
 
     @Override
     public boolean onMessage(PlayerAgent entity, Telegram telegram) {
+        System.out.println("=======>messaghe");
         return false;
     }
 

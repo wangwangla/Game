@@ -2,7 +2,6 @@ package com.ychstudio;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.learn.MyPlayScreen;
 import com.ychstudio.gamesys.GameManager;
 import com.ychstudio.screens.PlayScreen;
 

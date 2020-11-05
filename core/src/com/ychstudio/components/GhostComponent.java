@@ -2,6 +2,7 @@ package com.ychstudio.components;
 
 import com.badlogic.ashley.core.Component;
 import com.badlogic.gdx.physics.box2d.Body;
+import com.ychstudio.TeleManager;
 import com.ychstudio.ai.fsm.GhostAgent;
 import com.ychstudio.ai.fsm.GhostState;
 
@@ -29,7 +30,7 @@ public class GhostComponent implements Component {
 
     public GhostComponent(Body body) {
         this.body = body;
-        ghostAgent = new GhostAgent(this);
+        TeleManager.ghone =  ghostAgent = new GhostAgent(this);
         ghostAgent.stateMachine.setInitialState(GhostState.MOVE_UP);
         currentState = MOVE_UP;
         weaken = false;
