@@ -10,7 +10,7 @@ import com.pacman.constant.Constant;
 import com.pacman.screen.base.BaseScreen;
 
 /**
- * 主页定时3秒之后挑转，目前只放一张图片
+// *
  */
 public class LoadingScreen extends BaseScreen {
     @Override
@@ -22,5 +22,10 @@ public class LoadingScreen extends BaseScreen {
         stage.addAction(Actions.delay(0,Actions.run(()->{
             exitScreen(GameScreen.class);
         })));
+    }
+
+    @Override
+    public void resize(int width, int height) {
+        super.resize(width, height);
     }
 }

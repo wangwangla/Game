@@ -246,12 +246,12 @@ public abstract class BatchTiledMapRenderer implements TiledMapRenderer, Disposa
 	/** Called before the rendering of all layers starts. */
 	protected void beginRender () {
 		AnimatedTiledMapTile.updateAnimationBaseTime();
-//		batch.begin();
+		batch.begin();
 	}
 
 	/** Called after the rendering of all layers ended. */
 	protected void endRender () {
-//		batch.end();
+		batch.end();
 	}
 
 	@Override

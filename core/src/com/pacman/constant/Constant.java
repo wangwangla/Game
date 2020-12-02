@@ -22,7 +22,7 @@ public class Constant {
 
 
     /*****************refence*************************/
-    public static FitViewport viewport ;
+    public static Viewport viewport ;
     public static CpuSpriteBatch batch;
     public static Game game;
     public static World world;
