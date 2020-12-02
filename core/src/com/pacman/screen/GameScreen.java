@@ -3,6 +3,8 @@ package com.pacman.screen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.maps.MapLayer;
+import com.badlogic.gdx.maps.MapLayers;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
@@ -13,6 +15,8 @@ import com.pacman.constant.Constant;
 import com.pacman.screen.base.BaseScreen;
 import com.pacman.view.GameView;
 import com.pacman.view.controller.GameController;
+import com.pacman.view.util.MapUtils;
+import com.pacman.view.util.Tools;
 
 import box2dLight.RayHandler;
 
@@ -27,7 +31,19 @@ public class GameScreen extends BaseScreen {
     @Override
     public void show() {
         tiledMap = new TmxMapLoader().load("map/map.tmx");
-        tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap, 1 / 16f, batch);
+
+        float worldWidth = Constant.viewport.getWorldWidth();
+        float worldHeight = Constant.viewport.getWorldHeight();
+        float scale = Math.min(worldWidth/19,worldHeight/23);
+
+        tiledMapRenderer = new OrthogonalTiledMapRenderer(tiledMap,scale/16, batch);
+
+
+        MapLayers layers = tiledMap.getLayers();
+        MapUtils utils = new MapUtils();
+        for (MapLayer layer : layers) {
+            utils.buildStaticObject(layer);
+        }
     }
 
 
