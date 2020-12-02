@@ -383,6 +383,11 @@ public class Label extends Widget {
 			this.fontColor = fontColor;
 		}
 
+		public LabelStyle (BitmapFont font) {
+			this.font = font;
+			this.fontColor = fontColor;
+		}
+
 		public LabelStyle (LabelStyle style) {
 			font = style.font;
 			if (style.fontColor != null) fontColor = new Color(style.fontColor);
