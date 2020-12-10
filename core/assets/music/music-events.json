@@ -1,0 +1,60 @@
+{
+"states": [
+	{
+		"name": "RISING",
+		"tracks": [
+			{
+				"fileName": "001b rising.ogg"
+			}
+		],
+		"enterTransitions": {
+			"CALM": {
+				"class": "com.gdx.musicevents.effects.FadeIn",
+				"totalTime": 0.5,
+				"offset": 0.2
+			}
+		},
+		"exitTransitions": {
+			"CALM": {
+				"class": "com.gdx.musicevents.effects.Stop"
+			}
+		},
+		"loopTrack": true
+	},
+	{
+		"name": "COMBAT",
+		"tracks": [
+			{
+				"fileName": "001c action.ogg"
+			}
+		],
+		"enterTransitions": {},
+		"exitTransitions": {},
+		"randomTrack": true
+	},
+	{
+		"name": "CALM",
+		"tracks": [
+			{
+				"fileName": "001a calm.ogg"
+			}
+		],
+		"enterTransitions": {
+			"RISING": {
+				"class": "com.gdx.musicevents.effects.FadeIn",
+				"totalTime": 0.5,
+				"offset": 0.2
+			}
+		},
+		"exitTransitions": {
+			"RISING": {
+				"class": "com.gdx.musicevents.effects.FadeOut",
+				"totalTime": 0.5,
+				"offset": 0.2
+			}
+		},
+		"resumeTrack": true,
+		"loopTrack": true
+	}
+]
+}
