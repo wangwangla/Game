@@ -5,10 +5,6 @@ buildscript {
     repositories {
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-
-        mavenCentral()
-        jcenter()
-
         maven {
             url 'https://maven.google.com/'
             name 'Google'
@@ -22,6 +18,10 @@ buildscript {
         maven { url 'http://deltadna.bintray.com/android' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        mavenCentral()
+        jcenter()
+
+
 
         dependencies {
             classpath 'com.android.tools.build:gradle:3.6.3'
@@ -43,14 +43,15 @@ allprojects {
         maven { url 'http://deltadna.bintray.com/android' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
-
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
         google()
         jcenter()
+        mavenCentral()
     }
 
     repositories {
-        mavenCentral()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+
+
     }
 }

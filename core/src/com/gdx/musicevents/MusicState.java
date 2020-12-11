@@ -1,18 +1,15 @@
 package com.gdx.musicevents;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
-import com.badlogic.gdx.audio.Music.OnCompletionListener;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectMap;
-import com.gdx.musicevents.effects.Effect;
 import com.gdx.musicevents.effects.Play;
 import com.gdx.musicevents.effects.StartEffect;
 import com.gdx.musicevents.effects.Stop;
 import com.gdx.musicevents.effects.StopEffect;
 
-public class MusicState implements OnCompletionListener{
+public class MusicState implements Music.OnCompletionListener {
 
     private final String name;
     
